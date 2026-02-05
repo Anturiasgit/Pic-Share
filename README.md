@@ -1,2 +1,13 @@
 # Pic-Share
-Application web (React + Java Spring Boot) permettant de publier et gérer des articles autour de photos de paysages
+
+Full-stack web app built with Spring Boot and React.
+
+## Features
+- CRUD articles with landscape photos
+- REST API backend
+- React frontend
+
+## Tech stack
+- Java / Spring Boot
+- React
+- SQL database
