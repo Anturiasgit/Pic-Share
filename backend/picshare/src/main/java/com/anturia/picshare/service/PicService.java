@@ -31,9 +31,8 @@ public class PicService {
     public Pic updatePic(Long id, Pic updatedPic) {
         Pic pic = getPic(id);
 
-        pic.setTitle(updatedPic.getTitle());
         pic.setDescription(updatedPic.getDescription());
-        pic.setUrl(updatedPic.getUrl()); 
+        pic.setUrl(updatedPic.getUrl());
 
         return picRepository.save(pic);
     }

@@ -12,10 +12,8 @@ public class Pic {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String title;
-    private String description;
-    private String location;
-    private LocalDateTime createdAt = LocalDateTime.now();
     private String url;
+    private String description;
+    private LocalDateTime createdAt = LocalDateTime.now();
 
 }
