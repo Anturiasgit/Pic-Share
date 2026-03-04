@@ -23,6 +23,25 @@ public class UserService {
         return userRepository.save(user);
     }
 
+    public User register(String username, String email, String rawPassword) {
+
+    if (usernameExists(username)) {
+        throw new RuntimeException("Username already exists");
+    }
+
+    if (emailExists(email)) {
+        throw new RuntimeException("Email already exists");
+    }
+
+    User user = User.builder()
+            .username(username)
+            .email(email)
+            .password(passwordEncoder.encode(rawPassword))
+            .build();
+
+    return userRepository.save(user);
+}
+
     // Récupérer un utilisateur par ID
     public Optional<User> getUserById(Long id) {
         return userRepository.findById(id);
